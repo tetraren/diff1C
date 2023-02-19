@@ -1,6 +1,5 @@
 build/
 dist/
 dist-release/
-diff_pmk_1C.code-workspace
-diff_pmk.egg-info/
 *.spec
+diff1C.code-workspace
