@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "C:\\dev",
+            "args": ["-exe", ".\\P4Merge\\p4merge.exe",
+                    "-keywords", "ПМК",
+                    "-tbase","%baseCfgTitle",
+                    "-tnew","%secondCfgTitle",
+                    "-told","%oldVendorCfgTitle",
+                    "-log", "log.txt",
+                    "-base", "C:\\dev/test2.txt",
+                    "-old", "C:\\dev/test1.txt",
+                    "-new", "C:\\dev/test3.txt",
+                    "-merge", "C:\\dev/merge.txt"
+                ]
+        }        
+    ]
+}
