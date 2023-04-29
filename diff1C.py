@@ -104,6 +104,10 @@ class Args:
             self.path_old = self.path_base
             self.name_old = self.path_base
 
+        # FIX broken CRLF in path_merge
+        self.path_merge = self.path_merge.replace("\r", "").replace("\n", "").replace("¶","")
+
+
     def get_var_name(self, cmd_arg) -> str:
         return self.args_dict.get(cmd_arg)
 
@@ -153,7 +157,7 @@ class Processor:
     @classmethod
     def search_str(cls, file_path, word) -> bool:
         encoding = cls.detect_by_bom(file_path, "utf-8")
-        print("enc=",encoding)
+        # print("enc=",encoding)
         with open(file_path, 'r',encoding=encoding) as file:
             # read all content of a file
             content = file.read()
